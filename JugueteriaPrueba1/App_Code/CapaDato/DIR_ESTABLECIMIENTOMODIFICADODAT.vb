@@ -1,0 +1,384 @@
+Imports System.Data
+
+
+public class DIR_ESTABLECIMIENTOMODIFICADODAT
+
+#REGION "METODO INGRESO"
+
+    Public Sub Insertar_conexion(ByVal dr As Data.DataRow, ByVal sp As StoredProcedure_class, ByVal sqlCmd As Data.SqlClient.SqlCommand, ByVal usuario_actualizacion As String, ByVal periodo As Integer, ByVal ano As Integer)
+        Try
+            sp.AgregarParametro("ID_ENCUESTA", dr("ID_ENCUESTA"))
+            sp.AgregarParametro("ROL", dr("ROL"))
+            sp.AgregarParametro("DVROL", dr("DVROL"))
+            sp.AgregarParametro("ANO", ano)
+            sp.AgregarParametro("PERIODO", periodo)
+            sp.AgregarParametro("RUT", dr("RUT"))
+            sp.AgregarParametro("NUI", dr("NUI"))
+            sp.AgregarParametro("DVNUI", dr("DVNUI"))
+            sp.AgregarParametro("CIIU", dr("CIIU"))
+            sp.AgregarParametro("REGION_E", dr("REGION_E"))
+            sp.AgregarParametro("PROVINCIA_E", dr("PROVINCIA_E"))
+            sp.AgregarParametro("COMUNA_E", dr("COMUNA_E"))
+            sp.AgregarParametro("GLOSA_COMUNA_E", dr("GLOSA_COMUNA_E"))
+            sp.AgregarParametro("CALLE_E", dr("CALLE_E"))
+            sp.AgregarParametro("NRO_E", dr("NRO_E"))
+            sp.AgregarParametro("NRO_LOCAL_E", dr("NRO_LOCAL_E"))
+            sp.AgregarParametro("CODA_FONO_E", dr("CODA_FONO_E"))
+            sp.AgregarParametro("FONO_E", dr("FONO_E"))
+            sp.AgregarParametro("CODA_FAX_E", dr("CODA_FAX_E"))
+            sp.AgregarParametro("FAX_E", dr("FAX_E"))
+            sp.AgregarParametro("EMAIL_E", dr("EMAIL_E"))
+            sp.AgregarParametro("WEB_E", dr("WEB_E"))
+            sp.AgregarParametro("CASILLA_COMERCIAL", dr("CASILLA_COMERCIAL"))
+            sp.AgregarParametro("NOMBREESTABLECIMIENTO", dr("NOMBREESTABLECIMIENTO"))
+            sp.AgregarParametro("TIPO_ESTABLECIMIENTO", dr("TIPO_ESTABLECIMIENTO"))
+            sp.AgregarParametro("TIPO_FUNCIONAMIENTO", dr("TIPO_FUNCIONAMIENTO"))
+            sp.AgregarParametro("CLASE", dr("CLASE"))
+            sp.AgregarParametro("EXROL", dr("EXROL"))
+            sp.AgregarParametro("HABITACIONES_UNIDADES_HABITACIONALES", dr("HABITACIONES_UNIDADES_HABITACIONALES"))
+            sp.AgregarParametro("HABITACIONES_CAPACIDAD_MAXIMA", dr("HABITACIONES_CAPACIDAD_MAXIMA"))
+            sp.AgregarParametro("CABANAS_UNIDADES_HABITACIONALES", dr("CABANAS_UNIDADES_HABITACIONALES"))
+            sp.AgregarParametro("CABANAS_CAPACIDAD_MAXIMA", dr("CABANAS_CAPACIDAD_MAXIMA"))
+            sp.AgregarParametro("DEPARTAMENTOS_UNIDADES_HABITACIONALES", dr("DEPARTAMENTOS_UNIDADES_HABITACIONALES"))
+            sp.AgregarParametro("DEPARTAMENTOS_CAPACIDAD_MAXIMA", dr("DEPARTAMENTOS_CAPACIDAD_MAXIMA"))
+            sp.AgregarParametro("SITIOSDECAMPING_UNIDADES_HABITACIONALES", dr("SITIOSDECAMPING_UNIDADES_HABITACIONALES"))
+            sp.AgregarParametro("SITIOSDECAMPING_CAPACIDAD_MAXIMA", dr("SITIOSDECAMPING_CAPACIDAD_MAXIMA"))
+            sp.AgregarParametro("TOTAL_UNIDADES_HABITACIONALES", dr("TOTAL_UNIDADES_HABITACIONALES"))
+            sp.AgregarParametro("TOTAL_CAPACIDAD_MAXIMA", dr("TOTAL_CAPACIDAD_MAXIMA"))
+            sp.AgregarParametro("PERSONAL_OCUPADO_PERMANENTE_HOMBRE", dr("PERSONAL_OCUPADO_PERMANENTE_HOMBRE"))
+            sp.AgregarParametro("PERSONAL_OCUPADO_PERMANENTE_MUJER", dr("PERSONAL_OCUPADO_PERMANENTE_MUJER"))
+            sp.AgregarParametro("PERSONAL_OCUPADO_EVENTUAL_HOMBRE", dr("PERSONAL_OCUPADO_EVENTUAL_HOMBRE"))
+            sp.AgregarParametro("PERSONAL_OCUPADO_EVENTUAL_MUJER", dr("PERSONAL_OCUPADO_EVENTUAL_MUJER"))
+            sp.AgregarParametro("TOTAL_PERSONAL_OCUPADO_HOMBRE", dr("TOTAL_PERSONAL_OCUPADO_HOMBRE"))
+            sp.AgregarParametro("TOTAL_PERSONAL_OCUPADO_MUJER", dr("TOTAL_PERSONAL_OCUPADO_MUJER"))
+            sp.AgregarParametro("TOTAL_PERSONAL_OCUPADO", dr("TOTAL_PERSONAL_OCUPADO"))
+            sp.AgregarParametro("FECHA_LEVANTAMIENTO", "")
+
+            sp.EjecutarProcedimiento(sqlCmd)
+        Catch ex As Exception
+            Throw New Exception(ex.Message)
+        End Try
+    End Sub
+
+   Public Sub Insertar(byval DIR_ESTABLECIMIENTOMODIFICADO as DIR_ESTABLECIMIENTOMODIFICADOENT )
+       Try
+           Dim sp As New StoredProcedure_class("SP_DIR_ESTABLECIMIENTOMODIFICADO_Insertar")
+           sp.AgregarParametro("ID_ENCUESTA",DIR_ESTABLECIMIENTOMODIFICADO.ID_ENCUESTA)
+           sp.AgregarParametro("ROL",DIR_ESTABLECIMIENTOMODIFICADO.ROL)
+           sp.AgregarParametro("DVROL",DIR_ESTABLECIMIENTOMODIFICADO.DVROL)
+           sp.AgregarParametro("ANO",DIR_ESTABLECIMIENTOMODIFICADO.ANO)
+           sp.AgregarParametro("PERIODO",DIR_ESTABLECIMIENTOMODIFICADO.PERIODO)
+           sp.AgregarParametro("RUT",DIR_ESTABLECIMIENTOMODIFICADO.RUT)
+           sp.AgregarParametro("NUI",DIR_ESTABLECIMIENTOMODIFICADO.NUI)
+           sp.AgregarParametro("DVNUI",DIR_ESTABLECIMIENTOMODIFICADO.DVNUI)
+           sp.AgregarParametro("CIIU",DIR_ESTABLECIMIENTOMODIFICADO.CIIU)
+           sp.AgregarParametro("REGION_E",DIR_ESTABLECIMIENTOMODIFICADO.REGION_E)
+           sp.AgregarParametro("PROVINCIA_E",DIR_ESTABLECIMIENTOMODIFICADO.PROVINCIA_E)
+           sp.AgregarParametro("COMUNA_E",DIR_ESTABLECIMIENTOMODIFICADO.COMUNA_E)
+           sp.AgregarParametro("GLOSA_COMUNA_E",DIR_ESTABLECIMIENTOMODIFICADO.GLOSA_COMUNA_E)
+           sp.AgregarParametro("CALLE_E",DIR_ESTABLECIMIENTOMODIFICADO.CALLE_E)
+           sp.AgregarParametro("NRO_E",DIR_ESTABLECIMIENTOMODIFICADO.NRO_E)
+           sp.AgregarParametro("NRO_LOCAL_E",DIR_ESTABLECIMIENTOMODIFICADO.NRO_LOCAL_E)
+           sp.AgregarParametro("CODA_FONO_E",DIR_ESTABLECIMIENTOMODIFICADO.CODA_FONO_E)
+           sp.AgregarParametro("FONO_E",DIR_ESTABLECIMIENTOMODIFICADO.FONO_E)
+           sp.AgregarParametro("CODA_FAX_E",DIR_ESTABLECIMIENTOMODIFICADO.CODA_FAX_E)
+           sp.AgregarParametro("FAX_E",DIR_ESTABLECIMIENTOMODIFICADO.FAX_E)
+           sp.AgregarParametro("EMAIL_E",DIR_ESTABLECIMIENTOMODIFICADO.EMAIL_E)
+           sp.AgregarParametro("WEB_E",DIR_ESTABLECIMIENTOMODIFICADO.WEB_E)
+           sp.AgregarParametro("CASILLA_COMERCIAL",DIR_ESTABLECIMIENTOMODIFICADO.CASILLA_COMERCIAL)
+           sp.AgregarParametro("NOMBREESTABLECIMIENTO",DIR_ESTABLECIMIENTOMODIFICADO.NOMBREESTABLECIMIENTO)
+           sp.AgregarParametro("TIPO_ESTABLECIMIENTO",DIR_ESTABLECIMIENTOMODIFICADO.TIPO_ESTABLECIMIENTO)
+           sp.AgregarParametro("TIPO_FUNCIONAMIENTO",DIR_ESTABLECIMIENTOMODIFICADO.TIPO_FUNCIONAMIENTO)
+            sp.AgregarParametro("CLASE", DIR_ESTABLECIMIENTOMODIFICADO.CLASE)
+           sp.AgregarParametro("EXROL",DIR_ESTABLECIMIENTOMODIFICADO.EXROL)
+           sp.AgregarParametro("NOMBRE_INFORMANTE",DIR_ESTABLECIMIENTOMODIFICADO.NOMBRE_INFORMANTE)
+           sp.AgregarParametro("CARGO_INFORMANTE",DIR_ESTABLECIMIENTOMODIFICADO.CARGO_INFORMANTE)
+           sp.AgregarParametro("CODA_FONO_INFORMANTE",DIR_ESTABLECIMIENTOMODIFICADO.CODA_FONO_INFORMANTE)
+           sp.AgregarParametro("FONO_INFORMANTE",DIR_ESTABLECIMIENTOMODIFICADO.FONO_INFORMANTE)
+           sp.AgregarParametro("CELULAR_INFORMANTE",DIR_ESTABLECIMIENTOMODIFICADO.CELULAR_INFORMANTE)
+           sp.AgregarParametro("EMAIL_INFORMANTE",DIR_ESTABLECIMIENTOMODIFICADO.EMAIL_INFORMANTE)
+           sp.AgregarParametro("NOMBRE_JEFE_RESPONSABLE",DIR_ESTABLECIMIENTOMODIFICADO.NOMBRE_JEFE_RESPONSABLE)
+           sp.AgregarParametro("HABITACIONES_UNIDADES_HABITACIONALES",DIR_ESTABLECIMIENTOMODIFICADO.HABITACIONES_UNIDADES_HABITACIONALES)
+           sp.AgregarParametro("HABITACIONES_CAPACIDAD_MAXIMA",DIR_ESTABLECIMIENTOMODIFICADO.HABITACIONES_CAPACIDAD_MAXIMA)
+           sp.AgregarParametro("CABANAS_UNIDADES_HABITACIONALES",DIR_ESTABLECIMIENTOMODIFICADO.CABANAS_UNIDADES_HABITACIONALES)
+           sp.AgregarParametro("CABANAS_CAPACIDAD_MAXIMA",DIR_ESTABLECIMIENTOMODIFICADO.CABANAS_CAPACIDAD_MAXIMA)
+           sp.AgregarParametro("DEPARTAMENTOS_UNIDADES_HABITACIONALES",DIR_ESTABLECIMIENTOMODIFICADO.DEPARTAMENTOS_UNIDADES_HABITACIONALES)
+           sp.AgregarParametro("DEPARTAMENTOS_CAPACIDAD_MAXIMA",DIR_ESTABLECIMIENTOMODIFICADO.DEPARTAMENTOS_CAPACIDAD_MAXIMA)
+           sp.AgregarParametro("SITIOSDECAMPING_UNIDADES_HABITACIONALES",DIR_ESTABLECIMIENTOMODIFICADO.SITIOSDECAMPING_UNIDADES_HABITACIONALES)
+           sp.AgregarParametro("SITIOSDECAMPING_CAPACIDAD_MAXIMA",DIR_ESTABLECIMIENTOMODIFICADO.SITIOSDECAMPING_CAPACIDAD_MAXIMA)
+           sp.AgregarParametro("TOTAL_UNIDADES_HABITACIONALES",DIR_ESTABLECIMIENTOMODIFICADO.TOTAL_UNIDADES_HABITACIONALES)
+           sp.AgregarParametro("TOTAL_CAPACIDAD_MAXIMA",DIR_ESTABLECIMIENTOMODIFICADO.TOTAL_CAPACIDAD_MAXIMA)
+           sp.AgregarParametro("PERSONAL_OCUPADO_PERMANENTE_HOMBRE",DIR_ESTABLECIMIENTOMODIFICADO.PERSONAL_OCUPADO_PERMANENTE_HOMBRE)
+           sp.AgregarParametro("PERSONAL_OCUPADO_PERMANENTE_MUJER",DIR_ESTABLECIMIENTOMODIFICADO.PERSONAL_OCUPADO_PERMANENTE_MUJER)
+           sp.AgregarParametro("PERSONAL_OCUPADO_EVENTUAL_HOMBRE",DIR_ESTABLECIMIENTOMODIFICADO.PERSONAL_OCUPADO_EVENTUAL_HOMBRE)
+           sp.AgregarParametro("PERSONAL_OCUPADO_EVENTUAL_MUJER",DIR_ESTABLECIMIENTOMODIFICADO.PERSONAL_OCUPADO_EVENTUAL_MUJER)
+           sp.AgregarParametro("TOTAL_PERSONAL_OCUPADO_HOMBRE",DIR_ESTABLECIMIENTOMODIFICADO.TOTAL_PERSONAL_OCUPADO_HOMBRE)
+           sp.AgregarParametro("TOTAL_PERSONAL_OCUPADO_MUJER",DIR_ESTABLECIMIENTOMODIFICADO.TOTAL_PERSONAL_OCUPADO_MUJER)
+           sp.AgregarParametro("TOTAL_PERSONAL_OCUPADO",DIR_ESTABLECIMIENTOMODIFICADO.TOTAL_PERSONAL_OCUPADO)
+           sp.AgregarParametro("FECHA_LEVANTAMIENTO",DIR_ESTABLECIMIENTOMODIFICADO.FECHA_LEVANTAMIENTO)
+           sp.EjecutarProcedimiento()
+       Catch ex As Exception
+           Throw New Exception(ex.Message)
+       End Try
+   End Sub
+#End Region
+#REGION "METODO ACTUALIZAR"
+
+   Public Sub Actualizar(byval DIR_ESTABLECIMIENTOMODIFICADO as DIR_ESTABLECIMIENTOMODIFICADOENT )
+       Try
+           Dim sp As New StoredProcedure_class("SP_DIR_ESTABLECIMIENTOMODIFICADO_Actualizar")
+           sp.AgregarParametro("ID_ENCUESTA",DIR_ESTABLECIMIENTOMODIFICADO.ID_ENCUESTA)
+           sp.AgregarParametro("ROL",DIR_ESTABLECIMIENTOMODIFICADO.ROL)
+           sp.AgregarParametro("DVROL",DIR_ESTABLECIMIENTOMODIFICADO.DVROL)
+           sp.AgregarParametro("ANO",DIR_ESTABLECIMIENTOMODIFICADO.ANO)
+           sp.AgregarParametro("PERIODO",DIR_ESTABLECIMIENTOMODIFICADO.PERIODO)
+           sp.AgregarParametro("RUT",DIR_ESTABLECIMIENTOMODIFICADO.RUT)
+           sp.AgregarParametro("NUI",DIR_ESTABLECIMIENTOMODIFICADO.NUI)
+           sp.AgregarParametro("DVNUI",DIR_ESTABLECIMIENTOMODIFICADO.DVNUI)
+           sp.AgregarParametro("CIIU",DIR_ESTABLECIMIENTOMODIFICADO.CIIU)
+           sp.AgregarParametro("REGION_E",DIR_ESTABLECIMIENTOMODIFICADO.REGION_E)
+           sp.AgregarParametro("PROVINCIA_E",DIR_ESTABLECIMIENTOMODIFICADO.PROVINCIA_E)
+           sp.AgregarParametro("COMUNA_E",DIR_ESTABLECIMIENTOMODIFICADO.COMUNA_E)
+           sp.AgregarParametro("GLOSA_COMUNA_E",DIR_ESTABLECIMIENTOMODIFICADO.GLOSA_COMUNA_E)
+           sp.AgregarParametro("CALLE_E",DIR_ESTABLECIMIENTOMODIFICADO.CALLE_E)
+           sp.AgregarParametro("NRO_E",DIR_ESTABLECIMIENTOMODIFICADO.NRO_E)
+           sp.AgregarParametro("NRO_LOCAL_E",DIR_ESTABLECIMIENTOMODIFICADO.NRO_LOCAL_E)
+           sp.AgregarParametro("CODA_FONO_E",DIR_ESTABLECIMIENTOMODIFICADO.CODA_FONO_E)
+           sp.AgregarParametro("FONO_E",DIR_ESTABLECIMIENTOMODIFICADO.FONO_E)
+           sp.AgregarParametro("CODA_FAX_E",DIR_ESTABLECIMIENTOMODIFICADO.CODA_FAX_E)
+           sp.AgregarParametro("FAX_E",DIR_ESTABLECIMIENTOMODIFICADO.FAX_E)
+           sp.AgregarParametro("EMAIL_E",DIR_ESTABLECIMIENTOMODIFICADO.EMAIL_E)
+           sp.AgregarParametro("WEB_E",DIR_ESTABLECIMIENTOMODIFICADO.WEB_E)
+           sp.AgregarParametro("CASILLA_COMERCIAL",DIR_ESTABLECIMIENTOMODIFICADO.CASILLA_COMERCIAL)
+           sp.AgregarParametro("NOMBREESTABLECIMIENTO",DIR_ESTABLECIMIENTOMODIFICADO.NOMBREESTABLECIMIENTO)
+           sp.AgregarParametro("TIPO_ESTABLECIMIENTO",DIR_ESTABLECIMIENTOMODIFICADO.TIPO_ESTABLECIMIENTO)
+           sp.AgregarParametro("TIPO_FUNCIONAMIENTO",DIR_ESTABLECIMIENTOMODIFICADO.TIPO_FUNCIONAMIENTO)
+            sp.AgregarParametro("CLASE", DIR_ESTABLECIMIENTOMODIFICADO.CLASE)
+           sp.AgregarParametro("EXROL",DIR_ESTABLECIMIENTOMODIFICADO.EXROL)
+           sp.AgregarParametro("NOMBRE_INFORMANTE",DIR_ESTABLECIMIENTOMODIFICADO.NOMBRE_INFORMANTE)
+           sp.AgregarParametro("CARGO_INFORMANTE",DIR_ESTABLECIMIENTOMODIFICADO.CARGO_INFORMANTE)
+           sp.AgregarParametro("CODA_FONO_INFORMANTE",DIR_ESTABLECIMIENTOMODIFICADO.CODA_FONO_INFORMANTE)
+           sp.AgregarParametro("FONO_INFORMANTE",DIR_ESTABLECIMIENTOMODIFICADO.FONO_INFORMANTE)
+           sp.AgregarParametro("CELULAR_INFORMANTE",DIR_ESTABLECIMIENTOMODIFICADO.CELULAR_INFORMANTE)
+           sp.AgregarParametro("EMAIL_INFORMANTE",DIR_ESTABLECIMIENTOMODIFICADO.EMAIL_INFORMANTE)
+           sp.AgregarParametro("NOMBRE_JEFE_RESPONSABLE",DIR_ESTABLECIMIENTOMODIFICADO.NOMBRE_JEFE_RESPONSABLE)
+           sp.AgregarParametro("HABITACIONES_UNIDADES_HABITACIONALES",DIR_ESTABLECIMIENTOMODIFICADO.HABITACIONES_UNIDADES_HABITACIONALES)
+           sp.AgregarParametro("HABITACIONES_CAPACIDAD_MAXIMA",DIR_ESTABLECIMIENTOMODIFICADO.HABITACIONES_CAPACIDAD_MAXIMA)
+           sp.AgregarParametro("CABANAS_UNIDADES_HABITACIONALES",DIR_ESTABLECIMIENTOMODIFICADO.CABANAS_UNIDADES_HABITACIONALES)
+           sp.AgregarParametro("CABANAS_CAPACIDAD_MAXIMA",DIR_ESTABLECIMIENTOMODIFICADO.CABANAS_CAPACIDAD_MAXIMA)
+           sp.AgregarParametro("DEPARTAMENTOS_UNIDADES_HABITACIONALES",DIR_ESTABLECIMIENTOMODIFICADO.DEPARTAMENTOS_UNIDADES_HABITACIONALES)
+           sp.AgregarParametro("DEPARTAMENTOS_CAPACIDAD_MAXIMA",DIR_ESTABLECIMIENTOMODIFICADO.DEPARTAMENTOS_CAPACIDAD_MAXIMA)
+           sp.AgregarParametro("SITIOSDECAMPING_UNIDADES_HABITACIONALES",DIR_ESTABLECIMIENTOMODIFICADO.SITIOSDECAMPING_UNIDADES_HABITACIONALES)
+           sp.AgregarParametro("SITIOSDECAMPING_CAPACIDAD_MAXIMA",DIR_ESTABLECIMIENTOMODIFICADO.SITIOSDECAMPING_CAPACIDAD_MAXIMA)
+           sp.AgregarParametro("TOTAL_UNIDADES_HABITACIONALES",DIR_ESTABLECIMIENTOMODIFICADO.TOTAL_UNIDADES_HABITACIONALES)
+           sp.AgregarParametro("TOTAL_CAPACIDAD_MAXIMA",DIR_ESTABLECIMIENTOMODIFICADO.TOTAL_CAPACIDAD_MAXIMA)
+           sp.AgregarParametro("PERSONAL_OCUPADO_PERMANENTE_HOMBRE",DIR_ESTABLECIMIENTOMODIFICADO.PERSONAL_OCUPADO_PERMANENTE_HOMBRE)
+           sp.AgregarParametro("PERSONAL_OCUPADO_PERMANENTE_MUJER",DIR_ESTABLECIMIENTOMODIFICADO.PERSONAL_OCUPADO_PERMANENTE_MUJER)
+           sp.AgregarParametro("PERSONAL_OCUPADO_EVENTUAL_HOMBRE",DIR_ESTABLECIMIENTOMODIFICADO.PERSONAL_OCUPADO_EVENTUAL_HOMBRE)
+           sp.AgregarParametro("PERSONAL_OCUPADO_EVENTUAL_MUJER",DIR_ESTABLECIMIENTOMODIFICADO.PERSONAL_OCUPADO_EVENTUAL_MUJER)
+           sp.AgregarParametro("TOTAL_PERSONAL_OCUPADO_HOMBRE",DIR_ESTABLECIMIENTOMODIFICADO.TOTAL_PERSONAL_OCUPADO_HOMBRE)
+           sp.AgregarParametro("TOTAL_PERSONAL_OCUPADO_MUJER",DIR_ESTABLECIMIENTOMODIFICADO.TOTAL_PERSONAL_OCUPADO_MUJER)
+           sp.AgregarParametro("TOTAL_PERSONAL_OCUPADO",DIR_ESTABLECIMIENTOMODIFICADO.TOTAL_PERSONAL_OCUPADO)
+           sp.AgregarParametro("FECHA_LEVANTAMIENTO",DIR_ESTABLECIMIENTOMODIFICADO.FECHA_LEVANTAMIENTO)
+           sp.EjecutarProcedimiento()
+       Catch ex As Exception
+           Throw New Exception(ex.Message)
+       End Try
+   End Sub
+#End Region
+#REGION "METODO ELIMINAR"
+
+   Public Sub Eliminar( PARAMETROS )
+       Try
+           Dim sp As New StoredProcedure_class("SP_DIR_ESTABLECIMIENTOMODIFICADO_Eliminar")
+'Aqui deben definir los parametros necesarios
+           sp.AgregarParametro("","")
+'Fin de parametros necesarios
+           sp.EjecutarProcedimiento()
+       Catch ex As Exception
+           Throw New Exception(ex.Message)
+       End Try
+   End Sub
+
+#END REGION
+#REGION "METODO LISTAR"
+
+   Public Function Listar() as DIR_ESTABLECIMIENTOMODIFICADOENT()
+       Try
+           Dim dr as DataRow
+           Dim dt as DataTable
+           Dim i as Integer
+           Dim sp As New StoredProcedure_class("SP_DIR_ESTABLECIMIENTOMODIFICADO_Listar")
+           dt = sp.EjecutarProcedimiento().tables(0)
+           Dim DIR_ESTABLECIMIENTOMODIFICADO(dt.Rows.count() - 1) as DIR_ESTABLECIMIENTOMODIFICADOENT
+           i = 0
+           for each dr in dt.rows
+                DIR_ESTABLECIMIENTOMODIFICADO(i) = New DIR_ESTABLECIMIENTOMODIFICADOENT()
+                DIR_ESTABLECIMIENTOMODIFICADO(i).ID_ENCUESTA = dr("ID_ENCUESTA")
+                DIR_ESTABLECIMIENTOMODIFICADO(i).ROL = dr("ROL")
+                DIR_ESTABLECIMIENTOMODIFICADO(i).DVROL = dr("DVROL")
+                DIR_ESTABLECIMIENTOMODIFICADO(i).ANO = dr("ANO")
+                DIR_ESTABLECIMIENTOMODIFICADO(i).PERIODO = dr("PERIODO")
+                DIR_ESTABLECIMIENTOMODIFICADO(i).RUT = dr("RUT")
+                DIR_ESTABLECIMIENTOMODIFICADO(i).NUI = dr("NUI")
+                DIR_ESTABLECIMIENTOMODIFICADO(i).DVNUI = dr("DVNUI")
+                DIR_ESTABLECIMIENTOMODIFICADO(i).CIIU = dr("CIIU")
+                DIR_ESTABLECIMIENTOMODIFICADO(i).REGION_E = dr("REGION_E")
+                DIR_ESTABLECIMIENTOMODIFICADO(i).PROVINCIA_E = dr("PROVINCIA_E")
+                DIR_ESTABLECIMIENTOMODIFICADO(i).COMUNA_E = dr("COMUNA_E")
+                DIR_ESTABLECIMIENTOMODIFICADO(i).GLOSA_COMUNA_E = dr("GLOSA_COMUNA_E")
+                DIR_ESTABLECIMIENTOMODIFICADO(i).CALLE_E = dr("CALLE_E")
+                DIR_ESTABLECIMIENTOMODIFICADO(i).NRO_E = dr("NRO_E")
+                DIR_ESTABLECIMIENTOMODIFICADO(i).NRO_LOCAL_E = dr("NRO_LOCAL_E")
+                DIR_ESTABLECIMIENTOMODIFICADO(i).CODA_FONO_E = dr("CODA_FONO_E")
+                DIR_ESTABLECIMIENTOMODIFICADO(i).FONO_E = dr("FONO_E")
+                DIR_ESTABLECIMIENTOMODIFICADO(i).CODA_FAX_E = dr("CODA_FAX_E")
+                DIR_ESTABLECIMIENTOMODIFICADO(i).FAX_E = dr("FAX_E")
+                DIR_ESTABLECIMIENTOMODIFICADO(i).EMAIL_E = dr("EMAIL_E")
+                DIR_ESTABLECIMIENTOMODIFICADO(i).WEB_E = dr("WEB_E")
+                DIR_ESTABLECIMIENTOMODIFICADO(i).CASILLA_COMERCIAL = dr("CASILLA_COMERCIAL")
+                DIR_ESTABLECIMIENTOMODIFICADO(i).NOMBREESTABLECIMIENTO = dr("NOMBREESTABLECIMIENTO")
+                DIR_ESTABLECIMIENTOMODIFICADO(i).TIPO_ESTABLECIMIENTO = dr("TIPO_ESTABLECIMIENTO")
+                DIR_ESTABLECIMIENTOMODIFICADO(i).TIPO_FUNCIONAMIENTO = dr("TIPO_FUNCIONAMIENTO")
+                DIR_ESTABLECIMIENTOMODIFICADO(i).CLASE = dr("CLASE")
+                DIR_ESTABLECIMIENTOMODIFICADO(i).EXROL = dr("EXROL")
+                DIR_ESTABLECIMIENTOMODIFICADO(i).NOMBRE_INFORMANTE = dr("NOMBRE_INFORMANTE")
+                DIR_ESTABLECIMIENTOMODIFICADO(i).CARGO_INFORMANTE = dr("CARGO_INFORMANTE")
+                DIR_ESTABLECIMIENTOMODIFICADO(i).CODA_FONO_INFORMANTE = dr("CODA_FONO_INFORMANTE")
+                DIR_ESTABLECIMIENTOMODIFICADO(i).FONO_INFORMANTE = dr("FONO_INFORMANTE")
+                DIR_ESTABLECIMIENTOMODIFICADO(i).CELULAR_INFORMANTE = dr("CELULAR_INFORMANTE")
+                DIR_ESTABLECIMIENTOMODIFICADO(i).EMAIL_INFORMANTE = dr("EMAIL_INFORMANTE")
+                DIR_ESTABLECIMIENTOMODIFICADO(i).NOMBRE_JEFE_RESPONSABLE = dr("NOMBRE_JEFE_RESPONSABLE")
+                DIR_ESTABLECIMIENTOMODIFICADO(i).HABITACIONES_UNIDADES_HABITACIONALES = dr("HABITACIONES_UNIDADES_HABITACIONALES")
+                DIR_ESTABLECIMIENTOMODIFICADO(i).HABITACIONES_CAPACIDAD_MAXIMA = dr("HABITACIONES_CAPACIDAD_MAXIMA")
+                DIR_ESTABLECIMIENTOMODIFICADO(i).CABANAS_UNIDADES_HABITACIONALES = dr("CABANAS_UNIDADES_HABITACIONALES")
+                DIR_ESTABLECIMIENTOMODIFICADO(i).CABANAS_CAPACIDAD_MAXIMA = dr("CABANAS_CAPACIDAD_MAXIMA")
+                DIR_ESTABLECIMIENTOMODIFICADO(i).DEPARTAMENTOS_UNIDADES_HABITACIONALES = dr("DEPARTAMENTOS_UNIDADES_HABITACIONALES")
+                DIR_ESTABLECIMIENTOMODIFICADO(i).DEPARTAMENTOS_CAPACIDAD_MAXIMA = dr("DEPARTAMENTOS_CAPACIDAD_MAXIMA")
+                DIR_ESTABLECIMIENTOMODIFICADO(i).SITIOSDECAMPING_UNIDADES_HABITACIONALES = dr("SITIOSDECAMPING_UNIDADES_HABITACIONALES")
+                DIR_ESTABLECIMIENTOMODIFICADO(i).SITIOSDECAMPING_CAPACIDAD_MAXIMA = dr("SITIOSDECAMPING_CAPACIDAD_MAXIMA")
+                DIR_ESTABLECIMIENTOMODIFICADO(i).TOTAL_UNIDADES_HABITACIONALES = dr("TOTAL_UNIDADES_HABITACIONALES")
+                DIR_ESTABLECIMIENTOMODIFICADO(i).TOTAL_CAPACIDAD_MAXIMA = dr("TOTAL_CAPACIDAD_MAXIMA")
+                DIR_ESTABLECIMIENTOMODIFICADO(i).PERSONAL_OCUPADO_PERMANENTE_HOMBRE = dr("PERSONAL_OCUPADO_PERMANENTE_HOMBRE")
+                DIR_ESTABLECIMIENTOMODIFICADO(i).PERSONAL_OCUPADO_PERMANENTE_MUJER = dr("PERSONAL_OCUPADO_PERMANENTE_MUJER")
+                DIR_ESTABLECIMIENTOMODIFICADO(i).PERSONAL_OCUPADO_EVENTUAL_HOMBRE = dr("PERSONAL_OCUPADO_EVENTUAL_HOMBRE")
+                DIR_ESTABLECIMIENTOMODIFICADO(i).PERSONAL_OCUPADO_EVENTUAL_MUJER = dr("PERSONAL_OCUPADO_EVENTUAL_MUJER")
+                DIR_ESTABLECIMIENTOMODIFICADO(i).TOTAL_PERSONAL_OCUPADO_HOMBRE = dr("TOTAL_PERSONAL_OCUPADO_HOMBRE")
+                DIR_ESTABLECIMIENTOMODIFICADO(i).TOTAL_PERSONAL_OCUPADO_MUJER = dr("TOTAL_PERSONAL_OCUPADO_MUJER")
+                DIR_ESTABLECIMIENTOMODIFICADO(i).TOTAL_PERSONAL_OCUPADO = dr("TOTAL_PERSONAL_OCUPADO")
+                DIR_ESTABLECIMIENTOMODIFICADO(i).FECHA_LEVANTAMIENTO = dr("FECHA_LEVANTAMIENTO")
+                i = i + 1
+           next
+           return DIR_ESTABLECIMIENTOMODIFICADO
+       Catch ex As Exception
+           Throw New Exception(ex.Message)
+       End Try
+   End Function
+
+
+    Public Function ListarPorPeriodo(ByVal ano As Integer, ByVal periodo As Integer) As Data.DataTable
+        Try
+            Dim dt As DataTable
+            Dim sp As New StoredProcedure_class("SP_DIR_ESTABLECIMIENTOMODIFICADO_ListarPorPeriodo")
+            sp.AgregarParametro("ANO", ano)
+            sp.AgregarParametro("PERIODO", periodo)
+            dt = sp.EjecutarProcedimiento().Tables(0)
+            Return dt
+        Catch ex As Exception
+            Throw New Exception(ex.Message)
+        End Try
+    End Function
+#END REGION
+
+#Region "INSERTAR DESDE EMPRESA ORIGINAL O EN SU DEFECTO DESDE LOG"
+    Public Sub Insertar(ByVal sp As StoredProcedure_class, ByVal sqlCmd As Data.SqlClient.SqlCommand, ByVal dr As Data.DataRow, ByVal ano As Integer, ByVal periodo As Integer)
+        Try
+            'Dim sp As New StoredProcedure_class("SP_DIR_ESTABLECIMIENTOMODIFICADO_Insertar")
+            sp.AgregarParametro("ID_ENCUESTA", dr("ID_ENCUESTA"))
+            sp.AgregarParametro("ROL", dr("ROL"))
+            sp.AgregarParametro("DVROL", dr("DVROL"))
+            sp.AgregarParametro("ANO", ano)
+            sp.AgregarParametro("PERIODO", periodo)
+            sp.AgregarParametro("RUT", dr("RUT"))
+            sp.AgregarParametro("NUI", dr("NUI"))
+            sp.AgregarParametro("DVNUI", dr("DVNUI"))
+            sp.AgregarParametro("CIIU", dr("CIIU"))
+            sp.AgregarParametro("REGION_E", dr("REGION_E"))
+            sp.AgregarParametro("PROVINCIA_E", dr("PROVINCIA_E"))
+            sp.AgregarParametro("COMUNA_E", dr("COMUNA_E"))
+            sp.AgregarParametro("GLOSA_COMUNA_E", dr("GLOSA_COMUNA_E"))
+            sp.AgregarParametro("CALLE_E", dr("CALLE_E"))
+            sp.AgregarParametro("NRO_E", dr("NRO_E"))
+            sp.AgregarParametro("NRO_LOCAL_E", dr("NRO_LOCAL_E"))
+            sp.AgregarParametro("CODA_FONO_E", dr("CODA_FONO_E"))
+            sp.AgregarParametro("FONO_E", dr("FONO_E"))
+            sp.AgregarParametro("CODA_FAX_E", dr("CODA_FAX_E"))
+            sp.AgregarParametro("FAX_E", dr("FAX_E"))
+            sp.AgregarParametro("EMAIL_E", dr("EMAIL_E"))
+            sp.AgregarParametro("WEB_E", dr("WEB_E"))
+            sp.AgregarParametro("CASILLA_COMERCIAL", dr("CASILLA_COMERCIAL"))
+            sp.AgregarParametro("NOMBREESTABLECIMIENTO", dr("NOMBREESTABLECIMIENTO"))
+            sp.AgregarParametro("TIPO_ESTABLECIMIENTO", dr("TIPO_ESTABLECIMIENTO"))
+            sp.AgregarParametro("TIPO_FUNCIONAMIENTO", dr("TIPO_FUNCIONAMIENTO"))
+            sp.AgregarParametro("CLASE", dr("CLASE"))
+            sp.AgregarParametro("EXROL", dr("EXROL"))
+            ''son datos traidos desde dir_establecimientolevantamiento, por lo tanto no contiene los datos del informante
+            sp.AgregarParametro("HABITACIONES_UNIDADES_HABITACIONALES", dr("HABITACIONES_UNIDADES_HABITACIONALES"))
+            sp.AgregarParametro("HABITACIONES_CAPACIDAD_MAXIMA", dr("HABITACIONES_CAPACIDAD_MAXIMA"))
+            sp.AgregarParametro("CABANAS_UNIDADES_HABITACIONALES", dr("CABANAS_UNIDADES_HABITACIONALES"))
+            sp.AgregarParametro("CABANAS_CAPACIDAD_MAXIMA", dr("CABANAS_CAPACIDAD_MAXIMA"))
+            sp.AgregarParametro("DEPARTAMENTOS_UNIDADES_HABITACIONALES", dr("DEPARTAMENTOS_UNIDADES_HABITACIONALES"))
+            sp.AgregarParametro("DEPARTAMENTOS_CAPACIDAD_MAXIMA", dr("DEPARTAMENTOS_CAPACIDAD_MAXIMA"))
+            sp.AgregarParametro("SITIOSDECAMPING_UNIDADES_HABITACIONALES", dr("SITIOSDECAMPING_UNIDADES_HABITACIONALES"))
+            sp.AgregarParametro("SITIOSDECAMPING_CAPACIDAD_MAXIMA", dr("SITIOSDECAMPING_CAPACIDAD_MAXIMA"))
+            sp.AgregarParametro("TOTAL_UNIDADES_HABITACIONALES", dr("TOTAL_UNIDADES_HABITACIONALES"))
+            sp.AgregarParametro("TOTAL_CAPACIDAD_MAXIMA", dr("TOTAL_CAPACIDAD_MAXIMA"))
+            sp.AgregarParametro("PERSONAL_OCUPADO_PERMANENTE_HOMBRE", dr("PERSONAL_OCUPADO_PERMANENTE_HOMBRE"))
+            sp.AgregarParametro("PERSONAL_OCUPADO_PERMANENTE_MUJER", dr("PERSONAL_OCUPADO_PERMANENTE_MUJER"))
+            sp.AgregarParametro("PERSONAL_OCUPADO_EVENTUAL_HOMBRE", dr("PERSONAL_OCUPADO_EVENTUAL_HOMBRE"))
+            sp.AgregarParametro("PERSONAL_OCUPADO_EVENTUAL_MUJER", dr("PERSONAL_OCUPADO_EVENTUAL_MUJER"))
+            sp.AgregarParametro("TOTAL_PERSONAL_OCUPADO_HOMBRE", dr("TOTAL_PERSONAL_OCUPADO_HOMBRE"))
+            sp.AgregarParametro("TOTAL_PERSONAL_OCUPADO_MUJER", dr("TOTAL_PERSONAL_OCUPADO_MUJER"))
+            sp.AgregarParametro("TOTAL_PERSONAL_OCUPADO", dr("TOTAL_PERSONAL_OCUPADO"))
+            sp.EjecutarProcedimiento(sqlCmd)
+        Catch ex As Exception
+            Throw New Exception(ex.Message)
+        End Try
+    End Sub
+#End Region
+
+#Region "ArchivoExcel, OBTENER LOS DATOS DESDE EL ESTABLECIMIENTO_MODIFICADO"
+    Public Function ObtenerDatosParaInsercion(ByVal sp As StoredProcedure_class, ByVal sqlCmd As Data.SqlClient.SqlCommand, ByVal dr As Data.DataRow, ByVal ano As Integer, ByVal periodo As Integer) As Data.DataRow
+        Try
+            sp.AgregarParametro("RUT", dr("RUT"))
+            sp.AgregarParametro("ROL", dr("ROL"))
+            sp.AgregarParametro("DVROL", dr("DV_ROL"))
+            sp.AgregarParametro("ANO", ano)
+            sp.AgregarParametro("PERIODO", periodo)
+
+            Return sp.EjecutarProcedimiento(sqlCmd).Tables(0).Rows(0)
+        Catch ex As Exception
+            Throw New Exception(ex.Message)
+        End Try
+    End Function
+#End Region
+
+#Region "levantamiento archivo, OBTENER DATOS PARA LLENAR EL PANEL"
+    Public Function ListarPanelLevantamiento(ByVal periodo As Integer, ByVal ano As Integer) As Data.DataTable
+        Try
+            Dim sp As New StoredProcedure_class("SP_DIR_ESTABLECIMIENTOMODIFICADO_RolRutEstadoPorPeriodo")
+            sp.AgregarParametro("ANO", ano)
+            sp.AgregarParametro("PERIODO", periodo)
+            Return sp.EjecutarProcedimiento().Tables(0)
+        Catch ex As Exception
+            Throw New Exception(ex.Message)
+        End Try
+    End Function
+#End Region
+#Region "CONSTRUCTORES DE LA CLASE"
+    Public Sub New()
+
+    End Sub
+#End Region
+
+End Class
