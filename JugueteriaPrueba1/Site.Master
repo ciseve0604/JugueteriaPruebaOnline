@@ -54,7 +54,7 @@
                         <li><a runat="server" href="~/">Inicio</a></li>
                         <li><a runat="server" href="~/About">Acerca de</a></li>
                         <li><a runat="server" href="~/Contact">Contacto</a></li>
-                        <li><asp:Button id="btn_prueba_click" runat="server" Text="clic de prueba" BackColor="Brown"/></li>
+                        <li><asp:Button id="btn_prueba_click" runat="server" Text="clic de prueba quizas" BackColor="Brown"/></li>
                     </ul>
                 </div>
             </div>
