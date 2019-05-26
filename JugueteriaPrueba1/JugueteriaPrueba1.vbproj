@@ -303,6 +303,8 @@
     <Content Include="App_Code\CapaNegocio\OBJ_CALCULONEG.vb" />
     <Content Include="App_Code\CapaNegocio\OBJ_GETJUSTIFICACIONNEG.vb" />
     <Content Include="App_Code\CapaNegocio\OBJ_SETJUSTIFICACIONNEG.vb" />
+    <Content Include="App_Code\Clases\claseConexion.vb" />
+    <Content Include="App_Code\Clases\clasePrueba2.vb" />
     <Compile Include="App_Start\BundleConfig.vb" />
     <Compile Include="App_Start\RouteConfig.vb" />
     <Compile Include="About.aspx.designer.vb">

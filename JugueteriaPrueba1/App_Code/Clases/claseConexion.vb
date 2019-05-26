@@ -1,14 +1,7 @@
 ﻿Imports System.Data.SqlClient
 Imports System.Configuration.ConfigurationManager
 
-Public Class clasePrueba
-
-
-    Public Function Ejemplo()
-
-        Return 0
-    End Function
-
+Public Class claseConexion
 
 #Region " Variables "
 

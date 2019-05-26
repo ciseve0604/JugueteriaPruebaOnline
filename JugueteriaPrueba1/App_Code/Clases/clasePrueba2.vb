@@ -1,7 +1,7 @@
 ﻿Imports System.Data.SqlClient
 Imports System.Configuration.ConfigurationManager
 
-Public Class clasePrueba
+Public Class clasePrueba2
 
 
     Public Function Ejemplo()

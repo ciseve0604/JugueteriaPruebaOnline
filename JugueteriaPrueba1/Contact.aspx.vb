@@ -14,9 +14,13 @@ Partial Public Class contact
 
 
 
+
+
+
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As EventArgs) Handles Me.Load
 
-        rp.Ejemplo()
+
+
     End Sub
 
 End Class
