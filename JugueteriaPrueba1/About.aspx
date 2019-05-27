@@ -7,5 +7,5 @@
 
     <h2><%: Title %>.</h2>
     <p>Your app description page.</p>
-    <p>prueba camilo git....</p>
+    <p>prueba Cristian git. desde github a respositorio local...</p>
 </asp:Content>
