@@ -77,6 +77,19 @@ JugueteriaPrueba1
  <returns></returns>
  <remarks></remarks>
 </member>
+<member name="M:JugueteriaPrueba1.Funciones_generales_sistema.cambiarClaveMD5(System.String)">
+ <sumary>
+ Función que cambia un texto a MD5
+ <param name="texto">Valor que tiene la clave original del usuario.</param>
+ </sumary>
+</member>
+<member name="M:JugueteriaPrueba1.Funciones_generales_sistema.ClaveAleatoriaLetraNumero">
+ <summary>
+ Funcion Genera una Clave aleatoria de letras y Numeros
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
 <member name="F:JugueteriaPrueba1._Default._txt_usuario">
 <summary>
 Control txt_usuario.
@@ -149,7 +162,61 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:JugueteriaPrueba1.SiteMaster._btn_prueba_click">
+<member name="F:JugueteriaPrueba1.Login_Master._txt_nombre">
+<summary>
+Control txt_nombre.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:JugueteriaPrueba1.Login_Master._txt_password">
+<summary>
+Control txt_password.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:JugueteriaPrueba1.Login_Master._btn_login">
+<summary>
+Control btn_login.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:JugueteriaPrueba1.SiteMaster._head">
+<summary>
+Control head.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:JugueteriaPrueba1.SiteMaster._form1">
+<summary>
+Control form1.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:JugueteriaPrueba1.SiteMaster._ContentPlaceHolder1">
+<summary>
+Control ContentPlaceHolder1.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:JugueteriaPrueba1.Site2._btn_prueba_click">
 <summary>
 Control btn_prueba_click.
 </summary>
@@ -158,9 +225,45 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:JugueteriaPrueba1.SiteMaster._MainContent">
+<member name="F:JugueteriaPrueba1.Site2._Button4">
 <summary>
-Control MainContent.
+Control Button4.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:JugueteriaPrueba1.Site2._Button3">
+<summary>
+Control Button3.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:JugueteriaPrueba1.Site2._Button2">
+<summary>
+Control Button2.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:JugueteriaPrueba1.Site2._Button5">
+<summary>
+Control Button5.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:JugueteriaPrueba1.Site2._ContentPlaceHolder1">
+<summary>
+Control ContentPlaceHolder1.
 </summary>
 <remarks>
 Campo generado automáticamente.
