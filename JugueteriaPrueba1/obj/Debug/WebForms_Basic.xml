@@ -37,6 +37,46 @@ JugueteriaPrueba1
  Devuelve el objeto de registro Asp.
  </summary>
 </member>
+<member name="M:JugueteriaPrueba1.StoredProcedure_class.EjecutarProcedimiento">
+ <summary>
+ Ejecución de Procedimineto de almacenado especificado en el constructor.
+ </summary>
+ <returns>Retorna DataSet con los datos del procedimineto</returns>
+ <remarks></remarks>
+</member>
+<member name="M:JugueteriaPrueba1.StoredProcedure_class.EjecutarProcedimiento(System.String)">
+ <summary>
+ Ejectua un procedimiento de almacenado, en la base de datos especificada en la conexión.
+ </summary>
+ <param name="cadenaConexion">Nombre de la cadena de conexiónn especificada en el Web.Config, luegar donde se ejecutará el SP</param>
+ <returns>Retorna un DataSet con los datos retornados por el SP.</returns>
+ <remarks></remarks>
+</member>
+<member name="M:JugueteriaPrueba1.StoredProcedure_class.EjecutarProcedimiento(System.Data.SqlClient.SqlCommand)">
+ <summary>
+ Ejecuta el procedimiento de almacenado en la base de datos SIGE
+ </summary>
+ <param name="sqlCmd">Command SQL que contiene los datos del Procedimiento de almacenado.</param>
+ <returns>Retorna un DataSet con los datos consultados en el SP.</returns>
+ <remarks></remarks>
+</member>
+<member name="M:JugueteriaPrueba1.StoredProcedure_class.EjecutarConsulta(System.String)">
+ <summary>
+ Ejecutar Consultas a una Base de datos, se conecta a la base de datos SIGE
+ </summary>
+ <param name="consulta">Consulta completa que se realizará</param>
+ <returns>Retorna un DataSet, con el conjunto de datos obtenidos</returns>
+ <remarks></remarks>
+</member>
+<member name="M:JugueteriaPrueba1.StoredProcedure_class.EjecutarConsulta(System.String,System.String)">
+ <summary>
+ Ejecutar Consultas a una Base de datos
+ </summary>
+ <param name="consulta">Consulta completa que se realizará</param>
+ <param name="cadenaConexion">Nombre de la Cadena de conexión a Realizar</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
 <member name="F:JugueteriaPrueba1._Default._txt_usuario">
 <summary>
 Control txt_usuario.
@@ -67,6 +107,42 @@ Para modificarlo, mueva la declaración del campo del archivo del diseñador al 
 <member name="F:JugueteriaPrueba1._Default._lbl_prueba">
 <summary>
 Control lbl_prueba.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:JugueteriaPrueba1.Index._form1">
+<summary>
+Control form1.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:JugueteriaPrueba1.Index._txt_nombre">
+<summary>
+Control txt_nombre.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:JugueteriaPrueba1.Index._txt_password">
+<summary>
+Control txt_password.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:JugueteriaPrueba1.Index._btn_login">
+<summary>
+Control btn_login.
 </summary>
 <remarks>
 Campo generado automáticamente.

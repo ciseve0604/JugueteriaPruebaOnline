@@ -1,5 +1,7 @@
-﻿<%@ Master Language="VB" AutoEventWireup="true" CodeBehind="Site.master.vb" Inherits="JugueteriaPrueba1.SiteMaster" %>
-
+﻿<%-----------------------------------------------------------------------------------------------------------------------------------------------%>
+<%----------------------------------------            Propiedades por defecto MasterPage          -----------------------------------------------%>
+<%-----------------------------------------------------------------------------------------------------------------------------------------------%>
+<%@ Master Language="VB" AutoEventWireup="true" CodeBehind="Site.master.vb" Inherits="JugueteriaPrueba1.SiteMaster" %>
 <!DOCTYPE html>
 
 <html lang="es">
@@ -7,8 +9,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title><%: Page.Title %> - Mi aplicación ASP.NET</title>
+    <title><%: Page.Title %> - GRUMPIX Jugueteria</title>
+<%-----------------------------------------------------------------------------------------------------------------------------------------------%>
+<%--------------------------------------------------------------Librerias Sistemas---------------------------------------------------------------%>
+<%-----------------------------------------------------------------------------------------------------------------------------------------------%>
 
+          
     <asp:PlaceHolder runat="server">
         <%: Scripts.Render("~/bundles/modernizr") %>
     </asp:PlaceHolder>
@@ -16,7 +22,13 @@
     <webopt:bundlereference runat="server" path="~/Content/css" />
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
 
+
+
+    
 </head>
+<%-----------------------------------------------------------------------------------------------------------------------------------------------%>
+<%---------------------------------------------------------------Cuerpo del Módulo---------------------------------------------------------------%>
+<%-----------------------------------------------------------------------------------------------------------------------------------------------%>
 <body>
     <form runat="server">
         <asp:ScriptManager runat="server">
@@ -39,6 +51,7 @@
             </Scripts>
         </asp:ScriptManager>
 
+        <%--INICIO BODY BARRA DE NAVEGACIÓN--%>
         <div class="navbar navbar-inverse navbar-fixed-top">
             <div class="container">
                 <div class="navbar-header">
@@ -59,14 +72,39 @@
                 </div>
             </div>
         </div>
+        <%--FINAL BODY BARRA DE NAVEGACIÓN--%>
+        <%--INICIO BODY CONTENIDO--%>
         <div class="container body-content">
-            <asp:ContentPlaceHolder ID="MainContent" runat="server">
-            </asp:ContentPlaceHolder>
+            <table align="center" class=""  style="width:900px;">
+                <tr>
+                    <td>
+                        <div class="navbar-collapse collapse" style="width:120px; float:left;">
+                            <ul class="nav navbar-nav">
+                            <li><asp:Button id="Button4" runat="server" Text="clic de prueba quizas" BackColor="Brown"/></li>
+                            <li><asp:Button id="Button3" runat="server" Text="clic de prueba quizas" BackColor="Brown"/></li>
+                            <li><asp:Button id="Button2" runat="server" Text="clic de prueba quizas" BackColor="Brown"/></li>
+                            <li><asp:Button id="Button5" runat="server" Text="clic de prueba quizas" BackColor="Brown"/></li>
+                        </ul>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="" style="width:600px;">
+                            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+                            </asp:ContentPlaceHolder>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+
+                </tr>
+            </table>
+            
             <hr />
             <footer>
-                <p>&copy; <%: DateTime.Now.Year %> - Mi aplicación ASP.NET</p>
+                <p>&copy; <%: DateTime.Now.Year %> - GRUMPIX STORE</p>
             </footer>
         </div>
+        <%--FINAL BODY CONTENIDO--%>
 
     </form>
 </body>
