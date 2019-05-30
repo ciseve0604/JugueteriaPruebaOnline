@@ -90,6 +90,24 @@ JugueteriaPrueba1
  <returns></returns>
  <remarks></remarks>
 </member>
+<member name="F:JugueteriaPrueba1.Menu._trv_menu">
+<summary>
+Control trv_menu.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:JugueteriaPrueba1.Menu._myControl">
+<summary>
+Control myControl.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
 <member name="F:JugueteriaPrueba1._Default._txt_usuario">
 <summary>
 Control txt_usuario.
@@ -225,36 +243,18 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:JugueteriaPrueba1.Site2._Button4">
+<member name="F:JugueteriaPrueba1.Site2._menu1">
 <summary>
-Control Button4.
+Control menu1.
 </summary>
 <remarks>
 Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:JugueteriaPrueba1.Site2._Button3">
+<member name="F:JugueteriaPrueba1.Site2._menu_usuario">
 <summary>
-Control Button3.
-</summary>
-<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member>
-<member name="F:JugueteriaPrueba1.Site2._Button2">
-<summary>
-Control Button2.
-</summary>
-<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member>
-<member name="F:JugueteriaPrueba1.Site2._Button5">
-<summary>
-Control Button5.
+Control menu_usuario.
 </summary>
 <remarks>
 Campo generado automáticamente.
@@ -290,7 +290,7 @@ Para modificarlo, mueva la declaración del campo del archivo del diseñador al 
 </member>
 <member name="F:JugueteriaPrueba1.Site_Mobile._form1">
 <summary>
-control form1.
+Control form1.
 </summary>
 <remarks>
 Campo generado automáticamente.
@@ -306,9 +306,9 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:JugueteriaPrueba1.Site_Mobile._MainContent">
+<member name="F:JugueteriaPrueba1.Site_Mobile._ContentPlaceHolder1">
 <summary>
-Control MainContent.
+Control ContentPlaceHolder1.
 </summary>
 <remarks>
 Campo generado automáticamente.

@@ -4,6 +4,10 @@
 <%-----------------------------------------------------------------------------------------------------------------------------------------------%>
 <%@ Master Language="VB" AutoEventWireup="false" CodeBehind="Site2.master.vb" Inherits="JugueteriaPrueba1.Site2" %>
 
+<%--Cargamos el Menú--%>
+<%@ Register TagPrefix ='mnu' TagName='menu' Src='/Controles/Menu.ascx'%>
+<%-- Fin del menú --%>
+
 <!DOCTYPE html>
 
 <html lang="es">
@@ -80,13 +84,21 @@
             <table align="center" class=""  style="width:900px;">
                 <tr>
                     <td>
-                        <div class="navbar-collapse collapse" style="width:120px; float:left;">
-                            <ul class="nav navbar-nav">
-                            <li><asp:Button id="Button4" runat="server" Text="clic de prueba quizas" BackColor="Brown"/></li>
-                            <li><asp:Button id="Button3" runat="server" Text="clic de prueba quizas" BackColor="Brown"/></li>
-                            <li><asp:Button id="Button2" runat="server" Text="clic de prueba quizas" BackColor="Brown"/></li>
-                            <li><asp:Button id="Button5" runat="server" Text="clic de prueba quizas" BackColor="Brown"/></li>
-                        </ul>
+                        <div class="navbar-collapse collapse" class="col-5" float:left;">
+                            <%--Menú --%>
+                            <div class="col-1"
+                                <div class="col-1">
+                                <mnu:menu ID="menu1" runat="server"></mnu:menu>
+                                </div>
+                            </div>
+                            <%--Fin menú --%>
+                            <%-- Columna del menú --%>
+                            <div class="col-4">
+                                <div class="col-1">          
+                                <mnu:menu ID='menu_usuario' runat='server' Visible="False"></mnu:menu>            
+                                </div>
+                            </div>
+                            <%-- Fin Columna del menú --%> 
                         </div>
                     </td>
                     <td>

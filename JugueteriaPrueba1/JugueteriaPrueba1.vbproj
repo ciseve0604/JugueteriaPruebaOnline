@@ -138,6 +138,7 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
+    <Content Include="Controles\Menu.ascx" />
     <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -209,12 +210,12 @@
     <Content Include="App_Code\CapaDato\GES_ESTADOENCUESTADAT.vb" />
     <Content Include="App_Code\CapaDato\GES_ESTADOESTABLECIMIENTODAT.vb" />
     <Content Include="App_Code\CapaDato\GES_ESTANDARACCESODAT.vb" />
-    <Content Include="App_Code\CapaDato\GES_MENUDAT.vb" />
+    <Compile Include="App_Code\CapaDato\GES_MENUDAT.vb" />
     <Content Include="App_Code\CapaDato\GES_NUIDAT.vb" />
     <Content Include="App_Code\CapaDato\GES_PERIODO_APERTURACIERREDAT.vb" />
     <Content Include="App_Code\CapaDato\GES_PRIVILEGIOSDAT.vb" />
     <Content Include="App_Code\CapaDato\GES_RPCDAT.vb" />
-    <Content Include="App_Code\CapaDato\GES_USUARIODAT.vb" />
+    <Compile Include="App_Code\CapaDato\GES_USUARIODAT.vb" />
     <Content Include="App_Code\CapaDato\GLO_ACTIVIDADECONOMICADAT.vb" />
     <Content Include="App_Code\CapaDato\GLO_CLASEDAT.vb" />
     <Content Include="App_Code\CapaDato\GLO_ESTADOEMPRESADAT.vb" />
@@ -245,11 +246,11 @@
     <Content Include="App_Code\CapaEntidad\GES_ESTADOENCUESTAENT.vb" />
     <Content Include="App_Code\CapaEntidad\GES_ESTADOESTABLECIMIENTOENT.vb" />
     <Content Include="App_Code\CapaEntidad\GES_ESTANDARACCESOENT.vb" />
-    <Content Include="App_Code\CapaEntidad\GES_MENUENT.vb" />
+    <Compile Include="App_Code\CapaEntidad\GES_MENUENT.vb" />
     <Content Include="App_Code\CapaEntidad\GES_PERIODO_APERTURACIERREENT.vb" />
     <Content Include="App_Code\CapaEntidad\GES_PRIVILEGIOSENT.vb" />
     <Content Include="App_Code\CapaEntidad\GES_RPCENT.vb" />
-    <Content Include="App_Code\CapaEntidad\GES_USUARIOENT.vb" />
+    <Compile Include="App_Code\CapaEntidad\GES_USUARIOENT.vb" />
     <Content Include="App_Code\CapaEntidad\GLO_ACTIVIDADECONOMICAENT.vb" />
     <Content Include="App_Code\CapaEntidad\GLO_CLASEENT.vb" />
     <Content Include="App_Code\CapaEntidad\GLO_ESTADOEMPRESAENT.vb" />
@@ -285,12 +286,12 @@
     <Content Include="App_Code\CapaNegocio\GES_ESTADOENCUESTANEG.vb" />
     <Content Include="App_Code\CapaNegocio\GES_ESTADOESTABLECIMIENTONEG.vb" />
     <Content Include="App_Code\CapaNegocio\GES_ESTANDARACCESONEG.vb" />
-    <Content Include="App_Code\CapaNegocio\GES_MENUNEG.vb" />
+    <Compile Include="App_Code\CapaNegocio\GES_MENUNEG.vb" />
     <Content Include="App_Code\CapaNegocio\GES_NUINEG.vb" />
     <Content Include="App_Code\CapaNegocio\GES_PERIODO_APERTURACIERRENEG.vb" />
     <Content Include="App_Code\CapaNegocio\GES_PRIVILEGIOSNEG.vb" />
     <Content Include="App_Code\CapaNegocio\GES_RPCNEG.vb" />
-    <Content Include="App_Code\CapaNegocio\GES_USUARIONEG.vb" />
+    <Compile Include="App_Code\CapaNegocio\GES_USUARIONEG.vb" />
     <Content Include="App_Code\CapaNegocio\GLO_ACTIVIDADECONOMICANEG.vb" />
     <Content Include="App_Code\CapaNegocio\GLO_CLASENEG.vb" />
     <Content Include="App_Code\CapaNegocio\GLO_ESTADOEMPRESANEG.vb" />
@@ -330,6 +331,13 @@
     <Compile Include="Contenidos.aspx.vb">
       <DependentUpon>Contenidos.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Controles\Menu.ascx.designer.vb">
+      <DependentUpon>Menu.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\Menu.ascx.vb">
+      <DependentUpon>Menu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Default.aspx.vb">
       <SubType>ASPXCodeBehind</SubType>

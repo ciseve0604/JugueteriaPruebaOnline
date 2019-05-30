@@ -6,19 +6,66 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
     <meta name="viewport" content="width=device-width" />
-    <title></title>
-    <asp:ContentPlaceHolder runat="server" ID="HeadContent" />
+    <title>Login Grumpix</title>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous"/>
+
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+
+
+    <style type="text/css">
+        html,body{
+          height: 100%;
+          width: 100%;
+
+        }
+
+        .body {
+            /* The image used */
+
+            background-image: url(~/Resources/Images/Index/Fondo_nubes.jpg);
+
+            /*src="~/Resources/Images/Index/Fondo_nubes.jpg" */
+            /* Full height */
+            height: 100%;
+
+            /* Center and scale the image nicely */
+            background-repeat: no-repeat;
+            background-size: cover;
+
+        }
+
+        .login{
+            border: 1px solid #E1E1E1;
+            border-radius: 5px;
+            padding: 17px;
+            width:300px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+
+
 </head>
 <body>
     <form id="form1" runat="server">
-    <div>
-        <h1>Mobile Master Page</h1>
-        <asp:ContentPlaceHolder runat="server" ID="FeaturedContent" />
-        <section class="content-wrapper main-content clear-fix">
-            <asp:ContentPlaceHolder runat="server" ID="MainContent" />
-        </section>
-        <friendlyUrls:ViewSwitcher ID="ViewSwitcher1" runat="server" />
-    </div>
+        <div>
+            <h1>Grumpix App</h1>
+            <asp:ContentPlaceHolder runat="server" ID="FeaturedContent">
+            </asp:ContentPlaceHolder>
+            <section class="content-wrapper main-content clear-fix">
+            </section>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+
+            <friendlyUrls:ViewSwitcher ID="ViewSwitcher1" runat="server" />
+        </div>
     </form>
 </body>
 </html>
