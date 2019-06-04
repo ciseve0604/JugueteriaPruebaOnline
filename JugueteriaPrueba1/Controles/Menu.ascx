@@ -72,7 +72,7 @@
         background: -webkit-linear-gradient(#789bb5, #6588a2);
         background: -moz-linear-gradient(#789bb5, #6588a2);
         background: -o-linear-gradient(#789bb5, #6588a2);
-        background: -ms-linear-gradient(#789bb5, #6588a2);
+        /*background: -ms-linear-gradient(#789bb5, #6588a2);*/
         background: linear-gradient(#789bb5, #6588a2);
         box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15);
     }
@@ -85,7 +85,7 @@
             background: -webkit-linear-gradient(#537690, #3e617b);
             background: -moz-linear-gradient(#537690, #3e617b);
             background: -o-linear-gradient(#537690, #3e617b);
-            background: -ms-linear-gradient(#537690, #3e617b);
+            /*background: -ms-linear-gradient(#537690, #3e617b);*/
             background: linear-gradient(#537690, #3e617b);
         }
 
@@ -242,7 +242,7 @@
     }
 
     .informativo ul li h2 {
-        font-weight: 100px;
+        font-weight: 300px;
     }
 
     .informativo ul li p {
